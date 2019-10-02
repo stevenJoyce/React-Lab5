@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
+import Read from './components/read';
+import Create from './components/create';
 import Content from './components/content';
-import Footer from './components/footer';
-import Header from './components/header';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
@@ -17,7 +17,7 @@ class App extends React.Component {
     return (
       <BrowserRouter> 
         <div className="App">
-          <Navbar bg="primary" variant="dark">
+          <Navbar bg="dark" variant="dark">
             <Navbar.Brand href="#home">Navbar</Navbar.Brand>
             <Nav className="mr-auto">
               <Nav.Link href="/">Home</Nav.Link>
@@ -27,9 +27,9 @@ class App extends React.Component {
             
           </Navbar>
             <Switch>
-              <Route exact path="/" component={Header}/>
-              <Route path="/create" component={Footer}/>
-              <Route path="/read" component={Content}/>
+              <Route exact path="/" component={Content}/>
+              <Route path="/create" component={Create}/>
+              <Route path="/read" component={Read}/>
             </Switch>
         </div>
     </BrowserRouter>
