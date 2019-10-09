@@ -13,7 +13,7 @@ class MovieItem extends React.Component {
                 <Card.Header>{this.props.movie.Title}</Card.Header>
                 <Card.Body>
                     <blockquote className="blockquote mb-0">
-                        <img src ={this.props.movie.Poster}></img>
+                        <img src ={this.props.movie.Poster} alt="poster"></img>
                         <footer>
                         <p> {this.props.movie.Year} </p>
                         </footer>   
